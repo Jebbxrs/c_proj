@@ -47,7 +47,9 @@ Computes and returns the average of the three scores.
 */
 float calcAvgScore(int score1, int score2, int score3)
 {
-    return (score1 + score2 + score3) / 3.0;
+    float avgScore = (score1 + score2 + score3) / 3.0;
+    
+    return avgScore;
 } 
 /*printGrade function:
 Determines the grade respective to the average scores 
@@ -69,8 +71,7 @@ void printGrade(int score1, int score2, int score3, float avgScore)
     }
     else if (avgScore < 70 && avgScore >= 50)
     {
-        float pseudoAvg;
-        pseudoAvg = (score2 + score3) / 2;
+        float pseudoAvg = (score2 + score3) / 2;
 
         if (pseudoAvg > 70)
             grade = 'C';
