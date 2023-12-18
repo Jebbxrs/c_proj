@@ -125,13 +125,10 @@ void printCharges (char vehicleType, int hourEntered, int minuteEntered, int hou
         printf("ROUNDED TOTAL\t\t\t\t%8d\n", roundedHours);
         printf("\t\t\t\t\t--------\n");  
         printf("TOTAL CHARGE\t\t\t\t %3c%4.2f\n",'$', totalCharges);
-        return;
     }
     else 
-    {
         printf("ERROR: INVALID VEHICLE TYPE. PROGRAM TERMINATED.\n");
-        return;
-    }
+    return;  
 }
 /*vehicleIdentifier function:
   Prints out the type of vehicle according to the user's input.
