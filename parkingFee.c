@@ -32,17 +32,7 @@ int main ()
     scanf("%d", &minuteLeft);
     printf("\n");
     // Conditional statements
-    if (hourEntered > 24 || hourLeft > 24 || hourEntered < 0 || hourLeft < 0)
-    {
-        printf("ERROR: THE NUMBER OF HOURS SHOULD NOT EXCEED 24 OR BE LESS THAN 0.\n");
-        return 0;
-    }
-    else if (minuteEntered > 60 || minuteLeft > 60 || minuteEntered < 0 || minuteLeft < 0)
-    {
-        printf("ERROR: THE NUMBER OF MINUTES SHOULD NOT EXCEED 60 OR BE LESS THAN 0.\n");
-        return 0;
-    }
-    else if (hourEntered > hourLeft || ((hourLeft == 24 || hourLeft == 0) && minuteLeft > 0))
+    if (hourEntered > hourLeft || ((hourLeft == 24 || hourLeft == 0) && minuteLeft > 0))
     {
         printf("ERROR: CANNOT STAY BEYOND MIDNIGHT. VEHICLE WILL BE TOWED AWAY.\n");
         return 0;
