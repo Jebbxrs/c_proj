@@ -33,22 +33,22 @@ void storeInput(int *score1, int *score2, int *score3)
     scanf("%d", score2);
     printf("Enter the third score (0-100):  ");
     scanf("%d", score3);
-
-    if (score1 > 100 || score2 > 100 || score3 > 100 || score1 < 0 || score2 < 0 || score3 < 0)
-    {
-        printf("INVALID: Score must only be between 0 and 100.\n");
-        exit;
-    } 
-    else 
-        return;
+    return;
 }
 /*calcAvgScore function:
 Computes and returns the average of the three scores.
 */
 float calcAvgScore(int score1, int score2, int score3)
 {
-    float avgScore = (score1 + score2 + score3) / 3.0;
-    
+    float avgScore;
+
+    if (score1 > 100 || score2 > 100 || score3 > 100 || score1 < 0 || score2 < 0 || score3 < 0)
+    {
+        printf("INVALID: Score must only be between 0 and 100.\n");
+        exit;
+    } 
+    else
+        avgScore = (score1 + score2 + score3) / 3.0;
     return avgScore;
 } 
 /*printGrade function:

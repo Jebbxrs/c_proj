@@ -4,20 +4,22 @@
   */
 #include <stdio.h>
 // Declaration of user-defined function(s)
-void getInput();
+double getInput();
 void printQuadrant(double angle);
 
 //Main function
 int main()
 {   
+    double angle; 
     // Function call
-    getInput();
+    angle = getInput();
+    printQuadrant(angle);
     return 0;
 }
 /*getInput function:
   Prompts the user to enter an angle from 0° to 360°.
 */
-void getInput()
+double getInput()
 {
     // Local variables
     double angle;
@@ -25,8 +27,7 @@ void getInput()
     printf("\t\t%10s\n", "Quadrant Identifier");
     printf("Enter an angle: "); 
     scanf("%lf", &angle);
-    // Function call
-    printQuadrant(angle);
+    return angle;
 }
 /*printQuadrant function: 
   Determines which quadrant the input angle is found.
@@ -37,25 +38,13 @@ void printQuadrant(double angle)
     int quadrant; 
     // Conditional Statements
     if (angle == 0 || angle == 360)
-    {
         printf("The angle lies on the positive x-axis.\n");
-        return;        
-    }
     else if (angle == 90)
-    {
         printf("The angle lies on the positive y-axis.\n");
-        return;        
-    }
     else if (angle == 180)
-    {
-        printf("The angle lies on the negative x-axis.\n");
-        return;        
-    }
+        printf("The angle lies on the negative x-axis.\n");       
     else if (angle == 270)
-    {
-        printf("The angle lies on the negative y-axis.\n");
-        return;        
-    } 
+        printf("The angle lies on the negative y-axis.\n");        
     else if (angle > 0 && angle < 90)
         quadrant = 1;
     else if (angle > 90 && angle < 180)
